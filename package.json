@@ -1,12 +1,13 @@
 {
   "name": "isomorphic-jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A package for using JSX in Node.js",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --require babel-register --require babel-polyfill",
     "test::watch": "npm test -- --watch"
   },
+  "repository" : { "type": "git", "url": "https://github.com/TheKnarf/isomorphic-jsx" },
   "author": "Frank Lyder Bredland <fl@nyggen.com>",
   "license": "MIT",
   "devDependencies": {
@@ -15,8 +16,5 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "mocha": "^5.2.0"
-  },
-  "dependencies": {
-    "babel-cli": "^6.26.0"
   }
 }
