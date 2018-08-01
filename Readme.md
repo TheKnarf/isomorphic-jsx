@@ -26,7 +26,7 @@ You need to setup the following in `.babelrc`:
 An example of a simple test case:
 
 ```
-import { dom } from 'isomporhic-jsx';
+import { dom } from 'isomorphic-jsx';
 
 const Test = ({children}) => <div>{children}</div>;
 console.log( <Test>tester</Test> ); // "<div>tester</div>"
