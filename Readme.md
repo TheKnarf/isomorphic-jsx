@@ -1,8 +1,10 @@
 # isomorphic-jsx
 
+[![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg)](https://forthebadge.com)
+
 A library for using JSX in Node.js
 
-```
+```sh
 npm install --save isomorphic-jsx
 ```
 
@@ -12,7 +14,7 @@ You also need to install and setup babel with the `react` preset.
 
 You need to setup the following in `.babelrc`:
 
-```
+```js
 {
 	presets: ['react'],
 	plugins: [
@@ -25,7 +27,7 @@ You need to setup the following in `.babelrc`:
 
 An example of a simple test case:
 
-```
+```js
 import { dom } from 'isomorphic-jsx';
 
 const Test = ({children}) => <div>{children}</div>;
