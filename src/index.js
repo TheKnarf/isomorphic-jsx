@@ -1,28 +1,13 @@
-function attr_fix(key, value) {
-	if(typeof value === 'object') {
-		value = Object
-			.keys(value)
-			.map(key => `${key}:${value[key]}`)
-			.join(';');
-	}
-
-	return `${key}="${value}"`;
-};
-
 const flatten = arr =>
 	Array.isArray(arr)
 		? arr.map(flatten).join('')
 		: arr;
 
-function dom(type, attributes, ...children) {
-	var attr = Object
-		.keys(attributes || {})
-		.map(key => attr_fix(key, attributes[key]))
-		.join(' ');
+const mapObject = obj =>
+	Object.keys(obj || {})
+			.map(key => ({ key, value: obj[key] }));
 
-	if(attr !== null && attr !== "")
-		attr = " " + attr;
-
+const dom = (type, attributes, ...children) => {
 	if(typeof type == "function") {
 		var props = attributes || {};
 		props.components = {};
@@ -30,10 +15,19 @@ function dom(type, attributes, ...children) {
 		return flatten(type(props));
 	}
 
+	const handleAttrObjects = obj =>
+		(typeof obj === 'object')
+			? mapObject(obj).map(({key, value}) => `${key}:${value}`).join(';')
+			: obj;
+
+	const attr = mapObject(attributes)
+		.map(({key, value}) => ` ${key}="${handleAttrObjects(value)}"`)
+		.join('');
+
 	return `<${type}${attr}>${flatten(children)}</${type}>`;
 };
 
-function sls(strings, ...values) {  
+const sls = (strings, ...values) => {  
 	let output = values
 		.map((val, i) => strings[i] + val)
 		.join('') +
@@ -46,7 +40,4 @@ function sls(strings, ...values) {
 		.trim();
 };
 
-module.exports = {
-	dom: dom,
-	sls: sls
-};
+module.exports = { dom, sls };

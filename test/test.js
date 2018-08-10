@@ -2,7 +2,7 @@ var assert = require('assert');
 import { dom } from '../src/index.js';
 
 describe('isomorphic-jsx', () => {
-	describe('#dom()', () => {
+
 		it('<div>test</div>', () => {
 			assert.equal(
 			    <div>test</div>,
@@ -48,5 +48,22 @@ describe('isomorphic-jsx', () => {
 			);
 		})
 
-	})
+		it('attributes', () => {
+			assert.equal(
+				<div id="test"></div>,
+				'<div id="test"></div>'
+			);
+			assert.equal(
+				<div id="test" class="bob"></div>,
+				'<div id="test" class="bob"></div>'
+			);
+		})
+
+		it('attribute object', () => {
+			assert.equal(
+				<div style={{ color: 'red', border: '1px solid black' }} />,
+				'<div style="color:red;border:1px solid black"></div>'
+			)
+		})
+	
 })
