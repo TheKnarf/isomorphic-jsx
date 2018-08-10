@@ -33,3 +33,7 @@ import { dom } from 'isomorphic-jsx';
 const Test = ({children}) => <div>{children}</div>;
 console.log( <Test>tester</Test> ); // "<div>tester</div>"
 ```
+
+Example repos that uses `isomorphic-jsx`:
+
+- [theneva/beer-or-movie](https://github.com/theneva/beer-or-movie)
