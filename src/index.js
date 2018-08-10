@@ -27,7 +27,7 @@ function dom(type, attributes, ...children) {
 		var props = attributes || {};
 		props.components = {};
 		props.children = children;
-		return type(props);
+		return flatten(type(props));
 	}
 
 	return `<${type}${attr}>${flatten(children)}</${type}>`;

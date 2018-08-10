@@ -29,7 +29,6 @@ describe('isomorphic-jsx', () => {
 		})
 	
 		it('typeof children == array', () => {
-
 			assert.equal(
 				<div>
 				{[
@@ -38,6 +37,14 @@ describe('isomorphic-jsx', () => {
 				]}
 				</div>,
 				"<div>onetwo</div>"
+			);
+		})
+
+		it('function returning array', () => {
+			const Test = () => [ <div></div>, <p></p> ]	;
+			assert.equal(
+				<Test />,
+				"<div></div><p></p>"
 			);
 		})
 
