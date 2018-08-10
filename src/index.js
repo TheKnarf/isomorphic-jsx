@@ -9,6 +9,11 @@ function attr_fix(key, value) {
 	return `${key}="${value}"`;
 };
 
+const flatten = arr =>
+	Array.isArray(arr)
+		? arr.map(flatten).join('')
+		: arr;
+
 function dom(type, attributes, ...children) {
 	var attr = Object
 		.keys(attributes || {})
@@ -25,7 +30,7 @@ function dom(type, attributes, ...children) {
 		return type(props);
 	}
 
-	return `<${type}${attr}>${children.join('')}</${type}>`;
+	return `<${type}${attr}>${flatten(children)}</${type}>`;
 };
 
 function sls(strings, ...values) {  

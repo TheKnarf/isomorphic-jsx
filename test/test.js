@@ -27,6 +27,19 @@ describe('isomorphic-jsx', () => {
 				"<div>tester</div>"
 			);
 		})
+	
+		it('typeof children == array', () => {
+
+			assert.equal(
+				<div>
+				{[
+					"one",
+					"two"
+				]}
+				</div>,
+				"<div>onetwo</div>"
+			);
+		})
 
 	})
 })
