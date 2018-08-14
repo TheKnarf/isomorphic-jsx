@@ -1,4 +1,4 @@
-# isomorphic-jsx &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TheKnarf/isomorphic-jsx/blob/master/LICENSE) [![NpmVersion](https://img.shields.io/npm/v/isomorphic-jsx.svg)](https://www.npmjs.com/package/isomorphic-jsx)
+# isomorphic-jsx &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TheKnarf/isomorphic-jsx/blob/master/LICENSE) [![NpmVersion](https://img.shields.io/npm/v/isomorphic-jsx.svg)](https://www.npmjs.com/package/isomorphic-jsx) [![Build Status](https://travis-ci.org/TheKnarf/isomorphic-jsx.svg?branch=master)](https://travis-ci.org/TheKnarf/isomorphic-jsx) [![Coverage Status](https://coveralls.io/repos/github/TheKnarf/isomorphic-jsx/badge.svg?branch=master)](https://coveralls.io/github/TheKnarf/isomorphic-jsx?branch=master)
 
 A library for using JSX in Node.js
 
