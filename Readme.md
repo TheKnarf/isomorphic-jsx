@@ -1,6 +1,4 @@
-# isomorphic-jsx
-
-[![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg)](https://forthebadge.com)
+# isomorphic-jsx &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TheKnarf/isomorphic-jsx/blob/master/LICENSE) [![NpmVersion](https://img.shields.io/npm/v/isomorphic-jsx.svg)](https://www.npmjs.com/package/isomorphic-jsx)
 
 A library for using JSX in Node.js
 
@@ -37,3 +35,5 @@ console.log( <Test>tester</Test> ); // "<div>tester</div>"
 Example repos that uses `isomorphic-jsx`:
 
 - [theneva/beer-or-movie](https://github.com/theneva/beer-or-movie)
+
+[![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg)](https://forthebadge.com)
