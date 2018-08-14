@@ -1,3 +1,9 @@
 language: node_js
 node_js:
      - "stable"
+
+jobs:
+   include:
+      - stage: Produce Coverage
+        node_js: node
+        script: npm run test::coveralls 
