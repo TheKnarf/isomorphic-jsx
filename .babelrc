@@ -1,5 +1,5 @@
 {
-	presets: ['env','react'],
+	presets: ['react'],
 	plugins: [
 		['transform-react-jsx', {
 			'pragma': 'dom'

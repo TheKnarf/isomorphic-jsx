@@ -4,7 +4,7 @@
   "description": "A package for using JSX in Node.js",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --require babel-register --require babel-polyfill",
+    "test": "mocha --require babel-register",
     "test:watch": "npm test -- --watch",
     "test:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
@@ -15,8 +15,6 @@
   "author": "Frank Lyder Bredland <fl@nyggen.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "coveralls": "^3.0.2",

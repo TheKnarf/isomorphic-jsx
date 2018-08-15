@@ -1,5 +1,5 @@
 var assert = require('assert');
-import { dom } from '../src/index.js';
+const { dom } = require('../src/index.js');
 
 describe('isomorphic-jsx', () => {
 
