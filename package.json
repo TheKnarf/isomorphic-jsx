@@ -4,9 +4,10 @@
   "description": "A package for using JSX in Node.js",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --require babel-register",
+    "test": "jest",
     "test:watch": "npm test -- --watch",
-    "test:coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "test:coverage": "npm test -- --coverage",
+    "test:coveralls": "npm run test:coverage && coveralls < ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0",
     "coveralls": "^3.0.2",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2"
+    "jest": "^23.5.0"
   }
 }
