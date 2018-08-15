@@ -6,4 +6,4 @@ jobs:
    include:
       - stage: Produce Coverage
         node_js: node
-        script: npm run test::coveralls 
+        script: npm run test:coveralls 
