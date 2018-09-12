@@ -27,4 +27,4 @@ const dom = (type, attributes, ...children) => {
 	return `<${type}${attr}>${flatten(children)}</${type}>`;
 };
 
-module.exports = { dom };
+module.exports = { dom, createElement: dom };
