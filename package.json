@@ -1,6 +1,6 @@
 {
   "name": "isomorphic-jsx",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "A package for using JSX in Node.js",
   "main": "src/index.js",
   "scripts": {
@@ -10,11 +10,11 @@
     "test:coveralls": "npm run test:coverage && coveralls < ./coverage/lcov.info"
   },
   "keywords": [
-	  "jsx",
-	  "isomorphic",
-	  "isomorphic-jsx",
-	  "declerative",
-	  "ui"
+    "jsx",
+    "isomorphic",
+    "isomorphic-jsx",
+    "declerative",
+    "ui"
   ],
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
     "jest": "^23.5.0"
   },
   "files": [
-		"./src/index.js"
+    "./src/index.js"
   ]
 }
