@@ -8,15 +8,27 @@ A powerfull library in under 100 lines of code!
 
 ```sh
 npm install --save isomorphic-jsx
-npm install --save-dev babel-preset-react
+npm install --save-dev @babel/preset-react
 ```
 
-You also need to install and setup babel with the `babel-preset-react` preset.
+You also need to install and setup babel with the react preset for babel preset.
 
 ## Usage
 
 You need to setup the following in `.babelrc`:
 
+```js
+{
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+  plugins: [
+    ['@babel/transform-react-jsx', {
+      'pragma': 'dom'
+    }]
+  ]
+}
+```
+
+Or for older versions of babel:
 ```js
 {
   presets: ['react'],
