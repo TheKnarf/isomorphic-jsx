@@ -19,9 +19,9 @@ You need to setup the following in `.babelrc`:
 
 ```js
 {
-  presets: ['@babel/preset-env', '@babel/preset-react'],
+  presets: ['@babel/preset-react'],
   plugins: [
-    ['@babel/transform-react-jsx', {
+    ['@babel/plugin-transform-react-jsx', {
       'pragma': 'dom'
     }]
   ]
