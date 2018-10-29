@@ -19,22 +19,10 @@ You need to setup the following in `.babelrc`:
 
 ```js
 {
-  presets: ['@babel/preset-react'],
-  plugins: [
-    ['@babel/plugin-transform-react-jsx', {
-      'pragma': 'dom'
-    }]
-  ]
-}
-```
-
-Or for older versions of babel:
-```js
-{
-  presets: ['react'],
-  plugins: [
-    ['transform-react-jsx', {
-      'pragma': 'dom'
+  presets: [
+    [ '@babel/preset-react', {
+        pragma: 'dom',
+        throwIfNamespace: false
     }]
   ]
 }

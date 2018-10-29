@@ -65,5 +65,16 @@ describe('isomorphic-jsx', () => {
 				'<div style="color:red;border:1px solid black"></div>'
 			)
 		})
+
+		it('namespace', () => {
+			assert.equal(
+				<namespace:test />,
+				'<namespace:test></namespace:test>'
+			)
+			assert.equal(
+				<test namespace:attr />,
+				'<test namespace:attr=\"true\"></test>'
+			)
+		}) /**/
 	
 })
