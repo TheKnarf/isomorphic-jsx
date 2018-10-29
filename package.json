@@ -23,7 +23,9 @@
   "author": "Frank Lyder Bredland <fl@nyggen.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-react": "^6.24.1",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
     "coveralls": "^3.0.2",
     "jest": "^23.5.0"
   },

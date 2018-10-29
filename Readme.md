@@ -8,7 +8,7 @@ A powerfull library in under 100 lines of code!
 
 ```sh
 npm install --save isomorphic-jsx
-npm install --save-dev @babel/preset-react
+npm install --save-dev @babel/core @babel/preset-react
 ```
 
 You also need to install and setup babel with the react preset for babel preset.

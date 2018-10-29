@@ -1,8 +1,9 @@
 {
-	presets: ['react'],
-	plugins: [
-		['transform-react-jsx', {
-			'pragma': 'dom'
-		}]
-	]
+  presets: ['@babel/preset-react'],
+  plugins: [
+    ['@babel/plugin-transform-react-jsx', {
+      'pragma': 'dom'
+    }]
+  ]
 }
+
