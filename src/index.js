@@ -27,4 +27,6 @@ const dom = (type, attributes, ...children) => {
 	return `<${type}${attr}>${flatten(children)}</${type}>`;
 };
 
-module.exports = { dom, createElement: dom };
+const fragment = ({ children }) => children.join('');
+
+module.exports = { dom, createElement: dom, fragment };
