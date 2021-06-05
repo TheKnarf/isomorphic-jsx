@@ -6,8 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "test:coverage": "npm test -- --coverage",
-    "test:coveralls": "npm run test:coverage && coveralls < ./coverage/lcov.info"
+    "test:coverage": "npm test -- --coverage"
   },
   "keywords": [
     "jsx",
