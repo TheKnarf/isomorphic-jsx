@@ -15,23 +15,57 @@ You also need to install and setup babel with the react preset for babel preset.
 
 ## Usage
 
+### Babel
 You need to setup the following in `.babelrc`:
 
 ```js
 {
   presets: [
     [ '@babel/preset-react', {
-        pragma: 'dom',
         throwIfNamespace: false
+        
+        // Choose one (default: "classic"):
+        // - "classic" relies on manual imports in files where JSX is used
+        // - "auto" tells the compiler to insert JSX imports automatically
+        runtime: "classic" | "auto"
+        
+        // If using runtime:classic, specify the function names:
+        pragma: 'dom',
+        pragmaFrag: 'fragment',
+        
+        // If using runtime:auto, specify the module name:
+        importSource: "isomorphic-jsx",
     }]
   ]
 }
 ```
 
+### TypeScript
+You need to setup the following in `tsconfig.json`:
+
+```js
+{
+	"compilerOptions": {
+    // Choose one (there is no default):
+    // - "react" relies on manual imports in files where JSX is used
+    // - "react-jsx" tells the compiler to insert JSX imports automatically
+		"jsx": "react" | "react-jsx",
+    
+    // If using jsx:react, specify the function names:
+		"jsxFactory": "dom",
+		"jsxFragmentFactory": "fragment",
+    
+    // If using jsx:react-jsx, specify the module name:
+		"jsxImportSource": "."
+	}
+}
+
+```
+
 An example of a simple test case:
 
 ```js
-import { dom } from 'isomorphic-jsx';
+import { dom, fragment } from 'isomorphic-jsx'; // import not needed in "auto"/"react-jsx" mode
 
 const Test = ({children}) => <div>{children}</div>;
 
