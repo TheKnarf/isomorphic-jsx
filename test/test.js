@@ -1,3 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx dom */
+/** @jsxFrag fragment */
+
 var assert = require('assert');
 const { dom, fragment } = require('../src/index.js');
 

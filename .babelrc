@@ -1,9 +1,11 @@
 {
   presets: [
     [ '@babel/preset-react', {
-        pragma: 'dom',
-		  pragmaFrag: 'fragment',
+        runtime: 'automatic',
         throwIfNamespace: false
     }]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs"
   ]
 }

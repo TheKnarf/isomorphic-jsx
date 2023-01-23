@@ -14,15 +14,25 @@ npm install --save-dev @babel/core @babel/preset-react
 You also need to install and setup babel with the react preset for babel preset.
 
 ## Usage
-
 You need to setup the following in `.babelrc`:
 
 ```js
 {
   presets: [
     [ '@babel/preset-react', {
-        pragma: 'dom',
         throwIfNamespace: false
+        
+        // Choose one (default: "classic"):
+        // - "classic" relies on manual imports in files where JSX is used
+        // - "auto" tells the compiler to insert JSX imports automatically
+        runtime: "classic" | "auto"
+        
+        // If using runtime:classic, specify the function names:
+        pragma: 'dom',
+        pragmaFrag: 'fragment',
+        
+        // If using runtime:auto, specify the folder:
+        importSource: "isomorphic-jsx/src",
     }]
   ]
 }
@@ -31,7 +41,7 @@ You need to setup the following in `.babelrc`:
 An example of a simple test case:
 
 ```js
-import { dom } from 'isomorphic-jsx';
+import { dom, fragment } from 'isomorphic-jsx'; // import not needed in "auto"/"react-jsx" mode
 
 const Test = ({children}) => <div>{children}</div>;
 
