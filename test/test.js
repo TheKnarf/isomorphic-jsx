@@ -65,6 +65,13 @@ describe('isomorphic-jsx', () => {
 			'<div style="color:red;border:1px solid black"></div>'
 		)
 	})
+	
+	it('attribute array', () => {
+		assert.equal(
+			<div class={['class1', 'class2', 'class3']} />,
+			'<div class="class1 class2 class3"></div>'
+		)
+	})
 
 	it('namespace', () => {
 		assert.equal(

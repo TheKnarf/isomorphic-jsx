@@ -16,9 +16,11 @@ const dom = (type, attributes, ...children) => {
 	}
 
 	const handleAttrObjects = obj =>
-		(typeof obj === 'object')
-			? mapObject(obj).map(({key, value}) => `${key}:${value}`).join(';')
-			: obj;
+		Array.isArray(obj)
+			? obj.join(' ')
+			: (typeof obj === 'object')
+				? mapObject(obj).map(({key, value}) => `${key}:${value}`).join(';')
+				: obj;
 
 	const attr = mapObject(attributes)
 		.map(({key, value}) => ` ${key}="${handleAttrObjects(value)}"`)
