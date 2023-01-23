@@ -14,8 +14,6 @@ npm install --save-dev @babel/core @babel/preset-react
 You also need to install and setup babel with the react preset for babel preset.
 
 ## Usage
-
-### Babel
 You need to setup the following in `.babelrc`:
 
 ```js
@@ -33,33 +31,11 @@ You need to setup the following in `.babelrc`:
         pragma: 'dom',
         pragmaFrag: 'fragment',
         
-        // If using runtime:auto, specify the module name:
-        importSource: "isomorphic-jsx",
+        // If using runtime:auto, specify the folder:
+        importSource: "isomorphic-jsx/src",
     }]
   ]
 }
-```
-
-### TypeScript
-You need to setup the following in `tsconfig.json`:
-
-```js
-{
-	"compilerOptions": {
-    // Choose one (there is no default):
-    // - "react" relies on manual imports in files where JSX is used
-    // - "react-jsx" tells the compiler to insert JSX imports automatically
-		"jsx": "react" | "react-jsx",
-    
-    // If using jsx:react, specify the function names:
-		"jsxFactory": "dom",
-		"jsxFragmentFactory": "fragment",
-    
-    // If using jsx:react-jsx, specify the module name:
-		"jsxImportSource": "."
-	}
-}
-
 ```
 
 An example of a simple test case:

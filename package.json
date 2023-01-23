@@ -30,6 +30,7 @@
     "jest": "^26.0.1"
   },
   "files": [
-    "./src/index.js"
+    "./src/index.js",
+    "./src/jsx-runtime.js"
   ]
 }
